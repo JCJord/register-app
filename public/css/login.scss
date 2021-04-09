@@ -3,10 +3,8 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -18,47 +16,138 @@ body {
   overflow-x: hidden;
   height: auto;
 }
-
 .wrapper {
   position: relative;
 }
-
 .form-container {
   position: relative !important;
   margin: auto;
   background-color: white;
   width: 550px;
-  border-radius: 10px;
-  padding: 30px;
-  padding-bottom: 10px;
+  border-radius: 0px;
+  padding: 60px;
+  padding-bottom: 35px;
+  box-shadow: 2px;
+  padding-top: 60px;
+}
+
+.form-container p {
+  font-size: 22px;
+  margin-bottom: 0px !important;
+}
+
+.form-container h1 {
+  margin-bottom: 25px;
+  font-size: 40px;
 }
 
 .form-container h2 {
-  text-align: center;
-  margin-bottom: 10px;
-  font-weight: 500;
+  font-weight: normal;
+  margin-bottom: 20px;
 }
 
 .login-link {
   float: right;
+  margin-bottom: 15px;
 }
-
 .input-header {
   font-weight: 500;
 }
-
 .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100vw;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/ivan-stern-LOLSb7m6XkU-unsplash.jpg);
+}
+
+.form-group input {
+  border-radius: 0px;
+
+  padding: 30px 30px;
+}
+
+.btn-form {
+  margin: 0;
+  width: 100%;
+  background-color: black !important;
+  padding: 25px;
+  &:hover {
+    background-color: rgb(37, 37, 37) !important;
+  }
+
+  &:active {
+    background-color: rgb(37, 37, 37) !important;
+    color: white;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  font-size: 22px;
+  text-transform: capitalize;
+  font-weight: normal !important;
+}
+
+.spinner6 div {
+  border: 0.2rem solid rgb(0, 0, 0);
+  width: 2rem;
+  height: 2rem;
+  border-top-color: white;
+  border-left-color: white;
+  border-radius: 50%;
+  -webkit-animation: spinner 1s linear 0s infinite;
+  animation: spinner 1s linear 0s infinite;
+}
+
+@-webkit-keyframes spinner {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(211, 211, 211);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-position: center;
-  background-image: url(../img/ivan-stern-LOLSb7m6XkU-unsplash.jpg);
+  z-index: 999;
+}
+
+@media screen and(max-width: 600px) {
+  .form-container {
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 30px;
+  }
 }

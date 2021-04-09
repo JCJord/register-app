@@ -1,8 +1,11 @@
-<link rel="stylesheet" href="css/login.css" />
+<link rel="stylesheet" href="/css/login.css" />
 <div class="wrapper">
       <div class="container form-container">
-        <h2>LOGIN</h2>
-        <form>
+        {{>_msg}}
+        <p>Account</p>
+        <h1>Login</h1>
+        
+        <form action="/users/login" method="post">
           <div class="form-group">
             <label for="exampleInputEmail1" class="input-header"
               >Email address</label
@@ -12,6 +15,7 @@
               class="form-control"
               id="exampleInputEmail1"
               placeholder="Enter email"
+              name="email"
             />
           </div>
 
@@ -24,24 +28,22 @@
               class="form-control"
               id="exampleInputPassword1"
               placeholder="Password"
+              name="password"
             />
           </div>
           <div class="form-check">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label" for="exampleCheck1"
-              >Check me out</label
-            >
+            
 
             <label class="login-link">
               Don't have an account? <a href="signup">Click here</a></label
             >
           </div>
 
-          <button type="submit" class="btn btn-primary">LOGIN</button>
+          <button type="submit" class="btn btn-dark  btn-form">Login</button>
         </form>
+
+        <div class="loader-wrapper">
+         <div class="spinner6"><div></div></div>
+      </div>
       </div>
     </div>

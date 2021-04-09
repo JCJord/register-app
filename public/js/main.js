@@ -18,3 +18,18 @@ function openNav() {
 $(window).on("load", function () {
   $(".loader-wrapper").fadeOut("slow");
 });
+
+$('[name="username"]').bind("keypress", function (e) {
+  console.log(e.which);
+  if ($('[name="username"]')) {
+    var k = e.which;
+    var ok =
+      (k >= 65 && k <= 90) || // A-Z
+      (k >= 97 && k <= 122) || // a-z
+      (k >= 48 && k <= 57); // 0-9
+
+    if (!ok) {
+      e.preventDefault();
+    }
+  }
+});
